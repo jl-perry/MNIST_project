@@ -1,0 +1,7 @@
+./get_data.sh
+PYTHONPATH=. ./bin/mnist_preview
+pip install python-mnist
+from mnist import MNIST
+mndata = MNIST('./dir_with_mnist_data_files')
+mndata.load_training()
+mndata.load_testing()
